@@ -5,17 +5,7 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // get all products
 router.get('/', (req, res) => {
-  const query = {};
-  if (req.query.Product) {
-    query.Product = req.query.Product;
-  }
-  // find all products
-  Product.Post.findAll({
-    where: query,
-    include: []
-  }).then((ProductPost) => {
-    res.json(ProductPost);
-  });
+
   // be sure to include its associated Category and Tag data
 });
 
